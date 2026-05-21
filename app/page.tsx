@@ -2,22 +2,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
-import { cookies } from 'next/headers';
 
-
-async function getCookieData() {
-  const cookieStore = await cookies()
-  const cookieData = cookieStore.getAll()
-  return new Promise((resolve) =>
-    setTimeout(() => {
-      resolve(cookieData)
-    }, 1000)
-  )
-}
-
-export default async function Home() {
-  const cookieData = await getCookieData();
-
+export default function Home() {
   return (
     <div className="flex flex-1 flex-col gap-8">
       <section className="space-y-4">
