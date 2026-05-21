@@ -9,4 +9,4 @@ export const auth = createNeonAuth({
 
 export function getSession() {
     return auth.getSession();
-}
+}   
